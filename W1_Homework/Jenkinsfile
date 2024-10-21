@@ -1,0 +1,65 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_CREDENTIALS_ID = 'docker-hub-icon'
+        DOCKERHUB_REPO = 'mikagro/w1_homework'
+        DOCKER_IMAGE_TAG = 'latest'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/MikaGronroos2/OTP2' branch: 'main'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                dir('W1_Homework') {
+                    bat 'mvn clean test' // For Windows agents
+                    // sh 'mvn clean test' // Uncomment if on a Linux agent
+                }
+            }
+        }
+        stage('Code Coverage') {
+            steps {
+                dir('W1_Homework') {
+                    bat 'mvn jacoco:report'
+                }
+            }
+        }
+        stage('Publish Test Results') {
+            steps {
+                dir('W1_Homework') {
+                    junit '**/target/surefire-reports/*.xml'
+                }
+            }
+        }
+        stage('Publish Coverage Report') {
+            steps {
+                dir('W1_Homework') {
+                    jacoco()
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                dir('W1_Homework') {
+                    script {
+                        docker.build("${env.DOCKERHUB_REPO}:${env.DOCKER_IMAGE_TAG}")
+                    }
+                }
+            }
+        }
+        stage('Push Docker Image to Docker Hub') {
+            steps {
+                dir('W1_Homework') {
+                    script {
+                        docker.withRegistry('https://index.docker.io/v1/', env.DOCKERHUB_CREDENTIALS_ID) {
+                            docker.image("${env.DOCKERHUB_REPO}:${env.DOCKER_IMAGE_TAG}").push()
+                        }
+                    }
+                }
+            }
+        }
+    }

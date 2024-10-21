@@ -68,7 +68,7 @@
                     <archive>
                         <manifest>
                             <!-- Specify the fully qualified Main class -->
-                            <mainClass>LocalizedGreetingTest</mainClass>
+                            <mainClass>LocalizedGreeting</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
