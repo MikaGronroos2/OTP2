@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/MikaGronroos2/OTP2' branch: 'main'
+                git (url:'https://github.com/MikaGronroos2/OTP2' branch: 'main')
             }
         }
         stage('Run Tests') {
