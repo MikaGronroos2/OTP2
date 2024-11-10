@@ -7,7 +7,17 @@
         <option value="$PROJECT_DIR$/W1_Lecture/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/W1_Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/W2_LectureAssignment/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/W2_LectureAssignment/W2_LectureAssignment/pom.xml" />
+        <option value="$PROJECT_DIR$/W2_Assignment/W2_Assignment/pom.xml" />
+        <option value="$PROJECT_DIR$/W3_InClassAssignment/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/W2_LectureAssignment/W2_LectureAssignment/pom.xml" />
+        <option value="$PROJECT_DIR$/W2_LectureAssignment/untitled/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
