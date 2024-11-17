@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/W1_Homework/W2_LectureAssignment/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W1_Homework/W2_LectureAssignment/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W1_Homework/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W1_Homework/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W1_Lecture/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W1_Lecture/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W2_Assignment/W2_Assignment/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W2_Assignment/W2_Assignment/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W3_InClassAssignment/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/W3_InClassAssignment/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Folder/W1_Homework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W1_Homework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W1_Lecture/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W1_Lecture/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W2_Assignment/W2_Assignment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W2_Assignment/W2_Assignment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W2_LectureAssignment/W2_LectureAssignment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W2_LectureAssignment/W2_LectureAssignment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W2_LectureAssignment/untitled/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W2_LectureAssignment/untitled/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W3_InClassAssignment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Folder/W3_InClassAssignment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/W4_Home_Assignment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/W4_Home_Assignment/src/main/resources" charset="UTF-8" />
   </component>
 </project>
