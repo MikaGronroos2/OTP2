@@ -90,7 +90,7 @@ public class Main extends Application {
         addButton.setOnAction(e -> addButton());
         readButton.setOnAction(e -> readButton());
         updateButton.setOnAction(e -> updateButton());
-        deleteButton.setOnAction(e -> addButton());
+        deleteButton.setOnAction(e -> deleteButton());
 
         vbox.setPadding(new Insets(20));
         vbox.getChildren().addAll(hBox1, hBox2, hBox3, hBox4, hBox5, hBox6);
@@ -108,7 +108,7 @@ public class Main extends Application {
                 .append("age", Integer.parseInt(ageField.getText()))
                 .append("city", cityField.getText());
         MongoDBConnection.insertDocument("W4_Home_Assignment", "W4_Home_Collection", document);
-        addButton();
+        addWindow();
     }
 
     public void readButton() {
@@ -126,10 +126,12 @@ public class Main extends Application {
                 .append("age", Integer.parseInt(ageField.getText()))
                 .append("city", cityField.getText());
         MongoDBConnection.updateDocument("W4_Home_Assignment", "W4_Home_Collection", idField.getText(), updatedDoc);
+        updateWindow();
     }
 
     public void deleteButton() {
         MongoDBConnection.deleteDocument("W4_Home_Assignment", "W4_Home_Collection", idField.getText());
+        deleteWindow();
     }
 
     private void resultsWindow(Document foundDocument) {
@@ -163,9 +165,42 @@ public class Main extends Application {
         addButton.setOnAction(e -> addStage.close());
 
         addVbox.getChildren().addAll(addLabel,addButton);
-        Scene addScene = new Scene(addVbox,100,100);
+        Scene addScene = new Scene(addVbox,300,100);
         addStage.setTitle("Message");
         addStage.setScene(addScene);
         addStage.showAndWait();
+    }
+
+    private void updateWindow() {
+        Stage addStage = new Stage();
+        VBox addVbox = new VBox();
+        addVbox.setPadding(new Insets(20));
+
+        Label addLabel = new Label("Document has been updated successfully!");
+        Button addButton = new Button("OK");
+        addButton.setOnAction(e -> addStage.close());
+
+        addVbox.getChildren().addAll(addLabel,addButton);
+        Scene addScene = new Scene(addVbox,300,100);
+        addStage.setTitle("Message");
+        addStage.setScene(addScene);
+        addStage.showAndWait();
+    }
+
+    private void deleteWindow() {
+        Stage addStage = new Stage();
+        VBox addVbox = new VBox();
+        addVbox.setPadding(new Insets(20));
+
+        Label addLabel = new Label("Document has been deleted successfully!");
+        Button addButton = new Button("OK");
+        addButton.setOnAction(e -> addStage.close());
+
+        addVbox.getChildren().addAll(addLabel,addButton);
+        Scene addScene = new Scene(addVbox,300,100);
+        addStage.setTitle("Message");
+        addStage.setScene(addScene);
+        addStage.showAndWait();
+
     }
 }
